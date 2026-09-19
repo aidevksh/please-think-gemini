@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CoT 프롬프트 독립 검증</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-0: #f4f3f0;
+    --surface-1: #fcfcfb;
+    --surface-2: #ffffff;
+    --border:    #e4e3de;
+    --border-strong: #cfcdc6;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #78766f;
+    --series-1: #2a78d6;
+    --series-2: #eb6834;
+    --series-3: #1baf7a;
+    --good: #1a7f4b;
+    --warn: #b06000;
+    --grid: #e9e8e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --surface-0: #121211;
+      --surface-1: #1a1a19;
+      --surface-2: #232322;
+      --border:    #343432;
+      --border-strong: #4a4a46;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #94938b;
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --good: #4cb07a;
+      --warn: #d99a3a;
+      --grid: #2e2e2c;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-0: #121211;
+    --surface-1: #1a1a19;
+    --surface-2: #232322;
+    --border:    #343432;
+    --border-strong: #4a4a46;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #94938b;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --good: #4cb07a;
+    --warn: #d99a3a;
+    --grid: #2e2e2c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--surface-0);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
+                 "Segoe UI", "Noto Sans KR", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 16px 96px; }
+  header.top { padding: 56px 0 28px; border-bottom: 1px solid var(--border); margin-bottom: 36px; }
+  .eyebrow { font-size: 12px; letter-spacing: .13em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+  h1 { font-size: clamp(27px, 5vw, 40px); line-height: 1.18; margin: 12px 0 10px; letter-spacing: -.02em; }
+  .lede { font-size: 17px; color: var(--text-secondary); max-width: 66ch; margin: 0; }
+  .meta { margin-top: 20px; font-size: 13px; color: var(--text-muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .meta code { font-size: 12px; background: var(--surface-2); border: 1px solid var(--border); padding: 1px 6px; border-radius: 5px; color: var(--text-secondary); }
+
+  h2 { font-size: 21px; margin: 52px 0 6px; letter-spacing: -.01em; }
+  h3 { font-size: 16px; margin: 30px 0 6px; }
+  .sub { color: var(--text-secondary); font-size: 14px; margin: 0 0 20px; max-width: 74ch; }
+  p { max-width: 74ch; }
+
+  .verdict { background: var(--surface-2); border: 1px solid var(--border); border-left: 3px solid var(--series-3);
+             border-radius: 10px; padding: 22px 24px; margin: 8px 0 12px; }
+  .verdict h2 { margin: 0 0 10px; font-size: 19px; }
+  .verdict p { margin: 0 0 10px; color: var(--text-secondary); }
+  .verdict p:last-child { margin-bottom: 0; }
+  .verdict strong { color: var(--text-primary); }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(178px, 1fr)); gap: 12px; margin: 22px 0 6px; }
+  .tile { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .tile .label { font-size: 12.5px; color: var(--text-muted); }
+  .tile .value { font-size: 30px; font-weight: 650; letter-spacing: -.02em; margin-top: 3px; font-variant-numeric: tabular-nums; }
+  .tile .note { font-size: 12.5px; color: var(--text-secondary); margin-top: 2px; }
+
+  .card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; padding: 22px 22px 16px; margin: 18px 0; }
+  .card > h3:first-child { margin-top: 0; }
+  figcaption { font-size: 13px; color: var(--text-muted); margin-top: 10px; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 2px 0 16px; font-size: 13px; color: var(--text-secondary); }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; margin-top: 8px; }
+  th, td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; font-variant-numeric: normal; }
+  thead th { color: var(--text-muted); font-weight: 600; font-size: 12.5px; border-bottom: 1px solid var(--border-strong); }
+  tbody tr:hover { background: var(--surface-1); }
+  td.win { color: var(--good); font-weight: 600; }
+  td.lose { color: var(--warn); font-weight: 600; }
+  .scroll { overflow-x: auto; }
+
+  pre { background: var(--surface-1); border: 1px solid var(--border); border-radius: 9px; padding: 14px 16px;
+        overflow-x: auto; font-size: 12.5px; line-height: 1.6; color: var(--text-secondary);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  ul { color: var(--text-secondary); max-width: 74ch; padding-left: 20px; }
+  li { margin: 5px 0; }
+  li strong, p strong { color: var(--text-primary); }
+
+  .tip { position: fixed; pointer-events: none; opacity: 0; transition: opacity .12s;
+         background: var(--surface-2); border: 1px solid var(--border-strong); border-radius: 8px;
+         padding: 8px 11px; font-size: 12.5px; color: var(--text-primary); box-shadow: 0 6px 20px rgba(0,0,0,.14); z-index: 40;
+         max-width: 260px; line-height: 1.5; }
+  .tip b { font-weight: 650; }
+  .tip .dim { color: var(--text-muted); }
+
+  .themebtn { position: fixed; top: 14px; right: 14px; z-index: 50; background: var(--surface-2);
+              border: 1px solid var(--border); color: var(--text-secondary); border-radius: 8px;
+              padding: 6px 11px; font-size: 12.5px; cursor: pointer; font-family: inherit; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  svg { display: block; max-width: 100%; height: auto; overflow: visible; }
+  .panel-title { font-size: 13px; font-weight: 600; fill: var(--text-primary); }
+  .axis-text { font-size: 11.5px; fill: var(--text-muted); }
+  .val-label { font-size: 11.5px; font-weight: 600; fill: var(--text-secondary); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<button class="themebtn" id="themebtn">테마 전환</button>
+<div class="tip" id="tip"></div>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Independent Validation · please-think-gemini</div>
+  <h1>{{title}}</h1>
+  <p class="lede">{{lede}}</p>
+  <div class="meta">
+    <span>실행일 <code>{{date}}</code></span>
+    <span>CLI <code>agy -p</code></span>
+    <span>모델 <code>gemini-3.8-flash-low / -high</code></span>
+    <span>총 <code id="m-runs"></code> 런</span>
+    <span>태스크 <code id="m-tasks"></code>종 × 조건 3 × 반복 5</span>
+  </div>
+</header>
+
+<div class="verdict">
+  <h2>결론</h2>
+  {{verdict}}
+</div>
+
+<div class="tiles" id="tiles"></div>
+<p class="sub" style="margin-top:10px">정답률은 태스크별 모든 채점 항목을 하나도 틀리지 않은 <strong>엄격 통과(strict pass)</strong> 기준입니다. 괄호 안은 Wilson 95% 신뢰구간.</p>
+
+<h2>1. 조건별 종합 정답률</h2>
+<p class="sub">같은 태스크·같은 모델에 프롬프트만 바꿔 각 5회 반복했습니다. 세로 막대는 95% 신뢰구간입니다.</p>
+<div class="card">
+  <div class="legend" id="legend-main"></div>
+  <div id="chart-main"></div>
+  <figcaption>패널 = 모델(추론 예산). 막대 위 숫자는 정답률(%), 얇은 세로선은 Wilson 95% CI.</figcaption>
+</div>
+
+<h2>2. 태스크별 정답률</h2>
+<p class="sub">태스크별 조건 정답률(두 모델 합산, 태스크당 30런). 14개 중 12개는 전 조건 100% — 프롬프트의 효과는 아래 두 태스크에만 집중됩니다.</p>
+<div class="card">
+  <div class="legend" id="legend-task"></div>
+  <div id="chart-tasks"></div>
+  <figcaption>연한 회색 배경은 저장소가 원래 사용하던 1차 태스크(재현 검증), 그 외는 본 검증에서 새로 만든 고난도 2차 태스크입니다.</figcaption>
+</div>
+
+<h2>3. 비용 — 지연 시간과 출력 길이</h2>
+<p class="sub">프롬프트는 공짜가 아닙니다. 4단계 사고 절차를 강제하면 응답 시간과 토큰 사용량이 함께 늘어납니다.</p>
+<div class="grid2">
+  <div class="card">
+    <h3>평균 응답 시간 (초)</h3>
+    <div id="chart-lat"></div>
+  </div>
+  <div class="card">
+    <h3>평균 출력 길이 (문자)</h3>
+    <div id="chart-len"></div>
+  </div>
+</div>
+
+<h2>4. 정확도 대비 비용</h2>
+<p class="sub">가로축은 평균 응답 시간, 세로축은 정답률입니다. 왼쪽 위로 갈수록 좋습니다.</p>
+<div class="card">
+  <div class="legend" id="legend-sc"></div>
+  <div id="chart-scatter"></div>
+  <figcaption>점 하나 = 모델 × 조건 조합(각 {{per_cell}}런). 원형 = low 예산, 사각형 = high 예산.</figcaption>
+</div>
+
+<h2>5. 통계적 유의성</h2>
+<p class="sub">조건 간 정답률 차이를 부트스트랩(20,000회 재표집)으로 검정했습니다. 신뢰구간이 0을 포함하면 차이가 있다고 말할 수 없습니다.</p>
+<div class="card scroll">
+  <table id="tbl-pairs"></table>
+  <figcaption>Δ = 정답률 차이(퍼센트포인트). P(better) = 뒤 조건이 앞 조건보다 나을 부트스트랩 확률.</figcaption>
+</div>
+
+<h2>6. 전체 측정값</h2>
+<div class="card scroll">
+  <table id="tbl-cells"></table>
+</div>
+
+<h3>태스크별 상세</h3>
+<div class="card scroll">
+  <table id="tbl-tasks"></table>
+  <figcaption>각 칸은 해당 조건의 정답률(%)이며, 괄호 안은 부분 점수(채점 항목 중 맞춘 비율) 평균입니다.</figcaption>
+</div>
+
+<h2>7. 방법론</h2>
+<div class="card">
+  {{method}}
+</div>
+
+<h2>8. 한계</h2>
+<div class="card">
+  {{limits}}
+</div>
+
+<footer>
+  {{footer}}
+</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const S = DATA.summary, RUNS = DATA.runs, NARR = DATA.narr;
+const COND_LABEL = { base: "프롬프트 없음", v1: "v1 단순 CoT", v31: "v3.1 Universal" };
+const COND_COLOR = { base: "var(--series-1)", v1: "var(--series-2)", v31: "var(--series-3)" };
+const MODEL_LABEL = { "gemini-3.8-flash-low": "Gemini 3.8 Flash (Low)", "gemini-3.8-flash-high": "Gemini 3.8 Flash (High)" };
+const TASK_LABEL = NARR.task_labels, TIER1 = NARR.tier1;
+const CONDS = S.conds, MODELS = S.models, TASKS = S.tasks;
+
+/* ---------- tooltip ---------- */
+const tip = document.getElementById("tip");
+function hook(el, html) {
+  el.addEventListener("mousemove", e => {
+    tip.innerHTML = html; tip.style.opacity = 1;
+    const w = 260, x = Math.min(e.clientX + 14, window.innerWidth - w - 14);
+    tip.style.left = x + "px"; tip.style.top = (e.clientY + 16) + "px";
+  });
+  el.addEventListener("mouseleave", () => tip.style.opacity = 0);
+}
+const SVGNS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent) {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+function legend(id, conds) {
+  document.getElementById(id).innerHTML = conds.map(c =>
+    `<span><i class="swatch" style="background:${COND_COLOR[c]}"></i>${COND_LABEL[c]}</span>`).join("");
+}
+
+/* ---------- chart 1: grouped columns with CI, faceted by model ---------- */
+function mainChart() {
+  const host = document.getElementById("chart-main");
+  const W = 980, PW = 460, H = 300, pad = { t: 34, r: 18, b: 46, l: 46 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  MODELS.forEach((m, mi) => {
+    const ox = mi * (PW + 60);
+    const g = el("g", { transform: `translate(${ox},0)` }, svg);
+    el("text", { x: pad.l, y: 16, class: "panel-title" }, g).textContent = MODEL_LABEL[m];
+    const ih = H - pad.t - pad.b, iw = PW - pad.l - pad.r;
+    const y = v => pad.t + ih - (v / 100) * ih;
+    [0, 25, 50, 75, 100].forEach(v => {
+      el("line", { x1: pad.l, x2: pad.l + iw, y1: y(v), y2: y(v), stroke: "var(--grid)", "stroke-width": 1 }, g);
+      el("text", { x: pad.l - 8, y: y(v) + 4, class: "axis-text", "text-anchor": "end" }, g).textContent = v;
+    });
+    const bw = 24, slot = iw / CONDS.length;
+    CONDS.forEach((c, ci) => {
+      const d = S.cells[`${m}|${c}`];
+      const cx = pad.l + slot * (ci + .5);
+      const h = Math.max(1, (d.pass_rate / 100) * ih);
+      const r = el("rect", { x: cx - bw / 2, y: y(d.pass_rate), width: bw, height: h,
+        fill: COND_COLOR[c], rx: 4 }, g);
+      el("rect", { x: cx - bw / 2, y: y(d.pass_rate) + h - 4, width: bw, height: 4, fill: COND_COLOR[c] }, g);
+      hook(r, `<b>${COND_LABEL[c]}</b><br>${MODEL_LABEL[m]}<br>정답률 <b>${d.pass_rate}%</b> (${d.passes}/${d.n})<br>
+        <span class="dim">95% CI ${d.ci[0]}–${d.ci[1]} · 부분점수 ${d.partial}% · 평균 ${d.latency}s</span>`);
+      // CI whisker
+      el("line", { x1: cx, x2: cx, y1: y(d.ci[0]), y2: y(d.ci[1]), stroke: "var(--text-muted)", "stroke-width": 1.5 }, g);
+      el("line", { x1: cx - 5, x2: cx + 5, y1: y(d.ci[0]), y2: y(d.ci[0]), stroke: "var(--text-muted)", "stroke-width": 1.5 }, g);
+      el("line", { x1: cx - 5, x2: cx + 5, y1: y(d.ci[1]), y2: y(d.ci[1]), stroke: "var(--text-muted)", "stroke-width": 1.5 }, g);
+      el("text", { x: cx, y: y(d.ci[1]) - 8, class: "val-label", "text-anchor": "middle" }, g).textContent = d.pass_rate + "%";
+      const t = el("text", { x: cx, y: H - pad.b + 18, class: "axis-text", "text-anchor": "middle" }, g);
+      t.textContent = COND_LABEL[c];
+      el("text", { x: cx, y: H - pad.b + 32, class: "axis-text", "text-anchor": "middle" }, g).textContent = `${d.passes}/${d.n}`;
+    });
+    el("line", { x1: pad.l, x2: pad.l + iw, y1: y(0), y2: y(0), stroke: "var(--border-strong)", "stroke-width": 1 }, g);
+  });
+}
+
+/* ---------- chart 2: small multiples per task ---------- */
+function taskChart() {
+  const host = document.getElementById("chart-tasks");
+  const cols = 3, PW = 310, PH = 164, rows = Math.ceil(TASKS.length / cols);
+  const W = cols * PW, H = rows * PH;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  TASKS.forEach((t, i) => {
+    const gx = (i % cols) * PW, gy = Math.floor(i / cols) * PH;
+    const g = el("g", { transform: `translate(${gx},${gy})` }, svg);
+    const pad = { t: 46, r: 16, b: 30, l: 34 }, ih = PH - pad.t - pad.b, iw = PW - pad.l - pad.r;
+    if (TIER1.includes(t))
+      el("rect", { x: 4, y: 4, width: PW - 12, height: PH - 12, fill: "var(--surface-1)", rx: 8 }, g);
+    el("text", { x: pad.l - 12, y: 18, class: "panel-title" }, g).textContent = TASK_LABEL[t];
+    const y = v => pad.t + ih - (v / 100) * ih;
+    [0, 50, 100].forEach(v => {
+      el("line", { x1: pad.l, x2: pad.l + iw, y1: y(v), y2: y(v), stroke: "var(--grid)", "stroke-width": 1 }, g);
+      el("text", { x: pad.l - 6, y: y(v) + 4, class: "axis-text", "text-anchor": "end" }, g).textContent = v;
+    });
+    const slot = iw / CONDS.length, bw = 20;
+    CONDS.forEach((c, ci) => {
+      const d = S.tasks_detail[t];
+      let pass = 0, n = 0, part = 0, lat = 0, k = 0;
+      MODELS.forEach(m => { const q = d[`${m}|${c}`]; if (q && q.n) { pass += q.pass_rate * q.n; n += q.n; part += q.partial * q.n; lat += q.latency * q.n; k++; } });
+      const pr = n ? pass / n : 0, pt = n ? part / n : 0, lt = n ? lat / n : 0;
+      const cx = pad.l + slot * (ci + .5);
+      const h = Math.max(1, (pr / 100) * ih);
+      const r = el("rect", { x: cx - bw / 2, y: y(pr), width: bw, height: h, fill: COND_COLOR[c], rx: 4 }, g);
+      hook(r, `<b>${TASK_LABEL[t]}</b><br>${COND_LABEL[c]}<br>정답률 <b>${pr.toFixed(0)}%</b> (n=${n})<br>
+        <span class="dim">부분점수 ${pt.toFixed(0)}% · 평균 ${lt.toFixed(1)}s</span>`);
+      el("text", { x: cx, y: y(pr) - 6, class: "val-label", "text-anchor": "middle" }, g).textContent = pr.toFixed(0);
+      el("text", { x: cx, y: PH - pad.b + 16, class: "axis-text", "text-anchor": "middle" }, g).textContent =
+        c === "base" ? "없음" : (c === "v1" ? "v1" : "v3.1");
+    });
+    el("line", { x1: pad.l, x2: pad.l + iw, y1: y(0), y2: y(0), stroke: "var(--border-strong)", "stroke-width": 1 }, g);
+  });
+}
+
+/* ---------- chart 3/4: cost columns ---------- */
+function costChart(hostId, key, fmt, unit) {
+  const host = document.getElementById(hostId);
+  const W = 440, H = 230, pad = { t: 20, r: 14, b: 48, l: 44 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  const vals = [], groups = [];
+  MODELS.forEach(m => CONDS.forEach(c => { vals.push(S.cells[`${m}|${c}`][key]); groups.push([m, c]); }));
+  const max = Math.max(...vals) * 1.18;
+  const ih = H - pad.t - pad.b, iw = W - pad.l - pad.r;
+  const y = v => pad.t + ih - (v / max) * ih;
+  const ticks = 4;
+  for (let i = 0; i <= ticks; i++) {
+    const v = max * i / ticks;
+    el("line", { x1: pad.l, x2: pad.l + iw, y1: y(v), y2: y(v), stroke: "var(--grid)", "stroke-width": 1 }, svg);
+    el("text", { x: pad.l - 7, y: y(v) + 4, class: "axis-text", "text-anchor": "end" }, svg).textContent = fmt(v);
+  }
+  const slot = iw / groups.length, bw = 22;
+  groups.forEach(([m, c], i) => {
+    const d = S.cells[`${m}|${c}`], v = d[key];
+    const cx = pad.l + slot * (i + .5), h = Math.max(1, (v / max) * ih);
+    const r = el("rect", { x: cx - bw / 2, y: y(v), width: bw, height: h, fill: COND_COLOR[c], rx: 4 }, svg);
+    hook(r, `<b>${COND_LABEL[c]}</b><br>${MODEL_LABEL[m]}<br>${fmt(v)}${unit}<br><span class="dim">정답률 ${d.pass_rate}%</span>`);
+    el("text", { x: cx, y: y(v) - 6, class: "val-label", "text-anchor": "middle" }, svg).textContent = fmt(v);
+    el("text", { x: cx, y: H - pad.b + 16, class: "axis-text", "text-anchor": "middle" }, svg).textContent =
+      c === "base" ? "없음" : (c === "v1" ? "v1" : "v3.1");
+    if (c === "v1") el("text", { x: cx, y: H - pad.b + 32, class: "axis-text", "text-anchor": "middle" }, svg)
+      .textContent = m.endsWith("low") ? "Low" : "High";
+  });
+  el("line", { x1: pad.l, x2: pad.l + iw, y1: y(0), y2: y(0), stroke: "var(--border-strong)", "stroke-width": 1 }, svg);
+}
+
+/* ---------- chart 5: accuracy vs latency ---------- */
+function scatter() {
+  const host = document.getElementById("chart-scatter");
+  const W = 900, H = 330, pad = { t: 30, r: 40, b: 48, l: 52 };
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H }, host);
+  const pts = [];
+  MODELS.forEach(m => CONDS.forEach(c => pts.push({ m, c, d: S.cells[`${m}|${c}`] })));
+  const maxLat = Math.max(...pts.map(p => p.d.latency)) * 1.15;
+  const minPR = Math.min(...pts.map(p => p.d.pass_rate));
+  const lo = Math.max(0, Math.floor((minPR - 8) / 10) * 10), hi = 100;
+  const ih = H - pad.t - pad.b, iw = W - pad.l - pad.r;
+  const x = v => pad.l + (v / maxLat) * iw;
+  const y = v => pad.t + ih - ((v - lo) / (hi - lo)) * ih;
+  for (let v = lo; v <= hi; v += 10) {
+    el("line", { x1: pad.l, x2: pad.l + iw, y1: y(v), y2: y(v), stroke: "var(--grid)", "stroke-width": 1 }, svg);
+    el("text", { x: pad.l - 8, y: y(v) + 4, class: "axis-text", "text-anchor": "end" }, svg).textContent = v + "%";
+  }
+  for (let v = 0; v <= maxLat; v += 10) {
+    el("text", { x: x(v), y: H - pad.b + 18, class: "axis-text", "text-anchor": "middle" }, svg).textContent = v + "s";
+  }
+  el("text", { x: pad.l + iw / 2, y: H - 8, class: "axis-text", "text-anchor": "middle" }, svg).textContent = "평균 응답 시간 (초) →";
+  const SHORT = { base: "없음", v1: "v1", v31: "v3.1" };
+  const lab = [];
+  pts.forEach(p => {
+    const cx = x(p.d.latency), cy = y(p.d.pass_rate), isHigh = p.m.endsWith("high");
+    const node = isHigh
+      ? el("rect", { x: cx - 6, y: cy - 6, width: 12, height: 12, rx: 2, fill: COND_COLOR[p.c],
+                     stroke: "var(--surface-2)", "stroke-width": 2 }, svg)
+      : el("circle", { cx, cy, r: 6.5, fill: COND_COLOR[p.c], stroke: "var(--surface-2)", "stroke-width": 2 }, svg);
+    hook(node, `<b>${COND_LABEL[p.c]}</b><br>${MODEL_LABEL[p.m]}<br>정답률 <b>${p.d.pass_rate}%</b> · 평균 ${p.d.latency}s<br>
+      <span class="dim">출력 ${p.d.chars.toLocaleString()}자</span>`);
+    const below = lab.some(q => Math.abs(q.x - cx) < 90 && Math.abs(q.y - cy) < 8);
+    lab.push({ x: cx, y: cy });
+    el("text", { x: cx, y: below ? cy + 22 : cy - 13, class: "val-label", "text-anchor": "middle" }, svg)
+      .textContent = `${SHORT[p.c]} · ${isHigh ? "High" : "Low"}`;
+  });
+  el("line", { x1: pad.l, x2: pad.l + iw, y1: y(lo), y2: y(lo), stroke: "var(--border-strong)", "stroke-width": 1 }, svg);
+}
+
+/* ---------- tiles + tables ---------- */
+function tiles() {
+  const t = NARR.tiles.map(x =>
+    `<div class="tile"><div class="label">${x.label}</div><div class="value">${x.value}</div><div class="note">${x.note}</div></div>`).join("");
+  document.getElementById("tiles").innerHTML = t;
+  document.getElementById("m-runs").textContent = S.n_runs;
+  document.getElementById("m-tasks").textContent = TASKS.length;
+}
+function tblPairs() {
+  let h = `<thead><tr><th>모델</th><th>비교</th><th>Δ 정답률</th><th>95% CI</th><th>P(better)</th><th>판정</th></tr></thead><tbody>`;
+  MODELS.forEach(m => ["base->v1", "base->v31", "v1->v31"].forEach(k => {
+    const d = S.pairs[`${m}|${k}`];
+    const sig = d.lo > 0 ? "유의한 개선" : (d.hi < 0 ? "유의한 악화" : "차이 없음");
+    const cls = d.lo > 0 ? "win" : (d.hi < 0 ? "lose" : "");
+    h += `<tr><td>${MODEL_LABEL[m]}</td><td>${k.replace("->", " → ").replace("base", "없음").replace("v31", "v3.1")}</td>
+      <td>${d.mean > 0 ? "+" : ""}${d.mean}pp</td><td>[${d.lo}, ${d.hi}]</td><td>${d.p_better}</td><td class="${cls}">${sig}</td></tr>`;
+  }));
+  document.getElementById("tbl-pairs").innerHTML = h + "</tbody>";
+}
+function tblCells() {
+  let h = `<thead><tr><th>모델</th><th>조건</th><th>정답률</th><th>95% CI</th><th>부분점수</th><th>평균 시간</th><th>평균 출력</th><th>런</th></tr></thead><tbody>`;
+  MODELS.forEach(m => CONDS.forEach(c => {
+    const d = S.cells[`${m}|${c}`];
+    h += `<tr><td>${MODEL_LABEL[m]}</td><td>${COND_LABEL[c]}</td><td>${d.pass_rate}%</td>
+      <td>[${d.ci[0]}, ${d.ci[1]}]</td><td>${d.partial}%</td><td>${d.latency}s</td><td>${d.chars.toLocaleString()}자</td><td>${d.passes}/${d.n}</td></tr>`;
+  }));
+  document.getElementById("tbl-cells").innerHTML = h + "</tbody>";
+}
+function tblTasks() {
+  let h = `<thead><tr><th>태스크</th><th>분류</th>`;
+  MODELS.forEach(m => CONDS.forEach(c => h += `<th>${m.endsWith("low") ? "L" : "H"} · ${c === "base" ? "없음" : c === "v1" ? "v1" : "v3.1"}</th>`));
+  h += `</tr></thead><tbody>`;
+  TASKS.forEach(t => {
+    h += `<tr><td>${TASK_LABEL[t]}</td><td>${TIER1.includes(t) ? "1차(재현)" : "2차(신규)"}</td>`;
+    MODELS.forEach(m => CONDS.forEach(c => {
+      const q = S.tasks_detail[t][`${m}|${c}`];
+      const cls = q.pass_rate === 100 ? "" : (q.pass_rate === 0 ? "lose" : "");
+      h += `<td class="${cls}">${q.pass_rate}% <span style="color:var(--text-muted)">(${q.partial}%)</span></td>`;
+    }));
+    h += `</tr>`;
+  });
+  document.getElementById("tbl-tasks").innerHTML = h + "</tbody>";
+}
+
+legend("legend-main", CONDS); legend("legend-task", CONDS); legend("legend-sc", CONDS);
+tiles(); mainChart(); taskChart();
+costChart("chart-lat", "latency", v => v.toFixed(0), "초");
+costChart("chart-len", "chars", v => (v / 1000).toFixed(1) + "k", "문자");
+scatter(); tblPairs(); tblCells(); tblTasks();
+
+document.getElementById("themebtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  const dark = cur ? cur === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
+});
+</script>
+</body>
+</html>

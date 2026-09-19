@@ -1,0 +1,4709 @@
+[
+ {
+  "latency": 43.75,
+  "chars": 2113,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 49.81,
+  "chars": 2222,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 49.93,
+  "chars": 2524,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 52.42,
+  "chars": 2308,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 52.45,
+  "chars": 2258,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.55,
+  "chars": 1112,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.24,
+  "chars": 2475,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.25,
+  "chars": 2006,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.38,
+  "chars": 2443,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.7,
+  "chars": 966,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 49.24,
+  "chars": 2559,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 63.0,
+  "chars": 2730,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 55.39,
+  "chars": 2293,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 56.4,
+  "chars": 3003,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 61.73,
+  "chars": 2605,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.62,
+  "chars": 2765,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.56,
+  "chars": 2782,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.94,
+  "chars": 3052,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 25.33,
+  "chars": 2293,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.82,
+  "chars": 2622,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 85.87,
+  "chars": 12454,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 89.33,
+  "chars": 7702,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 90.25,
+  "chars": 9345,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 85.93,
+  "chars": 10214,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 89.36,
+  "chars": 7207,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.41,
+  "chars": 6042,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 48.17,
+  "chars": 14036,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.44,
+  "chars": 6141,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 33.86,
+  "chars": 9542,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.23,
+  "chars": 9824,
+  "rc": 0,
+  "stderr": "",
+  "task": "bulbs",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "set={1,16,36,64,81,100}": true,
+   "count=6": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 123.65,
+  "chars": 2887,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 98.51,
+  "chars": 2514,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 86.22,
+  "chars": 2798,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 73.24,
+  "chars": 2912,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 157.88,
+  "chars": 2912,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 46.0,
+  "chars": 11141,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.84,
+  "chars": 8624,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 23.76,
+  "chars": 5018,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 55.02,
+  "chars": 13148,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.75,
+  "chars": 2667,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 112.62,
+  "chars": 2948,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 135.47,
+  "chars": 2766,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 109.65,
+  "chars": 2366,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 140.78,
+  "chars": 3041,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 97.89,
+  "chars": 2367,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 56.36,
+  "chars": 17093,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.7,
+  "chars": 8215,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.23,
+  "chars": 2109,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.01,
+  "chars": 1674,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 57.7,
+  "chars": 14076,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": false,
+   "arrangement_A": true,
+   "arrangement_B": false
+  },
+  "score": 0.3333333333333333,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 74.51,
+  "chars": 7535,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 95.58,
+  "chars": 8868,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 84.79,
+  "chars": 6601,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 70.2,
+  "chars": 8138,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 75.89,
+  "chars": 7597,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 66.58,
+  "chars": 15494,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 71.12,
+  "chars": 16709,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 91.69,
+  "chars": 23274,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 39.6,
+  "chars": 8548,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 66.6,
+  "chars": 16906,
+  "rc": 0,
+  "stderr": "",
+  "task": "floors",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "solutions=2": true,
+   "arrangement_A": true,
+   "arrangement_B": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.37,
+  "chars": 2810,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 74.97,
+  "chars": 3730,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 141.26,
+  "chars": 3964,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 99.75,
+  "chars": 3890,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 193.05,
+  "chars": 4002,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.28,
+  "chars": 2870,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.01,
+  "chars": 2528,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.34,
+  "chars": 2749,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.89,
+  "chars": 2737,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.52,
+  "chars": 2742,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 138.61,
+  "chars": 4991,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 61.53,
+  "chars": 3925,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 150.0,
+  "chars": 3715,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 143.69,
+  "chars": 4366,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 93.74,
+  "chars": 3832,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.58,
+  "chars": 3116,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 29.13,
+  "chars": 2642,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.73,
+  "chars": 2828,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.47,
+  "chars": 2756,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.84,
+  "chars": 3374,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 57.9,
+  "chars": 10271,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 86.49,
+  "chars": 12787,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 91.62,
+  "chars": 9135,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 76.31,
+  "chars": 7139,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 100.89,
+  "chars": 8502,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.4,
+  "chars": 6750,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.69,
+  "chars": 7970,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 28.25,
+  "chars": 7665,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": false,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 0.6666666666666666,
+  "pass": false,
+  "has_answer_line": true
+ },
+ {
+  "latency": 23.01,
+  "chars": 5198,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.43,
+  "chars": 6070,
+  "rc": 0,
+  "stderr": "",
+  "task": "go_race",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "bug_identified": true,
+   "fix_named": true,
+   "fix_in_code": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 25.89,
+  "chars": 1559,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.36,
+  "chars": 903,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.71,
+  "chars": 966,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 27.12,
+  "chars": 1749,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.41,
+  "chars": 1322,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.52,
+  "chars": 798,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.78,
+  "chars": 1075,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.59,
+  "chars": 802,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.71,
+  "chars": 794,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.43,
+  "chars": 799,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.77,
+  "chars": 2620,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 27.78,
+  "chars": 2454,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.97,
+  "chars": 2623,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 32.28,
+  "chars": 2433,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 32.81,
+  "chars": 2344,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.38,
+  "chars": 976,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.88,
+  "chars": 1729,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.62,
+  "chars": 1584,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.7,
+  "chars": 2384,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.25,
+  "chars": 1073,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 45.75,
+  "chars": 6540,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 59.18,
+  "chars": 10899,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.53,
+  "chars": 5224,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 40.57,
+  "chars": 5187,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 128.93,
+  "chars": 5516,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.48,
+  "chars": 7285,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.14,
+  "chars": 5698,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.51,
+  "chars": 7434,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.78,
+  "chars": 5641,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.62,
+  "chars": 8928,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_josephus",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "survivor=5": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.54,
+  "chars": 739,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_modexp",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "rem=807": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 105.66,
+  "chars": 3549,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 108.67,
+  "chars": 3373,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 79.55,
+  "chars": 3290,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 132.11,
+  "chars": 3147,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 103.77,
+  "chars": 3207,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.29,
+  "chars": 1939,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 44.39,
+  "chars": 2022,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 37.82,
+  "chars": 2947,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.77,
+  "chars": 2217,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.61,
+  "chars": 2252,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 113.22,
+  "chars": 4014,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 89.77,
+  "chars": 3509,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 105.8,
+  "chars": 4541,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 82.6,
+  "chars": 3691,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 71.48,
+  "chars": 13678,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.48,
+  "chars": 5572,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 59.66,
+  "chars": 10672,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.4,
+  "chars": 3146,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.25,
+  "chars": 5887,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 69.15,
+  "chars": 14982,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_seating",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=8": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 27.23,
+  "chars": 1523,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 43.71,
+  "chars": 1800,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 28.0,
+  "chars": 1803,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.1,
+  "chars": 1800,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 43.96,
+  "chars": 1910,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.69,
+  "chars": 1249,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.75,
+  "chars": 1181,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.65,
+  "chars": 1282,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.11,
+  "chars": 1256,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.17,
+  "chars": 1112,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 40.6,
+  "chars": 2623,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 37.58,
+  "chars": 2187,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.19,
+  "chars": 2206,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.62,
+  "chars": 2120,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.36,
+  "chars": 2557,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.89,
+  "chars": 2123,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.17,
+  "chars": 1542,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.63,
+  "chars": 1719,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 22.18,
+  "chars": 1813,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.29,
+  "chars": 1992,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 69.14,
+  "chars": 5719,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 65.7,
+  "chars": 6144,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 61.93,
+  "chars": 6733,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 61.82,
+  "chars": 8674,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 69.27,
+  "chars": 6825,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 25.93,
+  "chars": 6980,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.31,
+  "chars": 8057,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 28.96,
+  "chars": 7687,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.03,
+  "chars": 8096,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 25.25,
+  "chars": 4951,
+  "rc": 0,
+  "stderr": "",
+  "task": "h_triples",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=306": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.74,
+  "chars": 2197,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 32.71,
+  "chars": 2206,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 32.92,
+  "chars": 1722,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 41.52,
+  "chars": 1858,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 44.5,
+  "chars": 1793,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.02,
+  "chars": 1406,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.15,
+  "chars": 2073,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.44,
+  "chars": 1119,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.72,
+  "chars": 2279,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.91,
+  "chars": 2538,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 47.92,
+  "chars": 2784,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 47.35,
+  "chars": 4306,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.12,
+  "chars": 2404,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 48.19,
+  "chars": 3288,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 49.13,
+  "chars": 2553,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 25.38,
+  "chars": 2268,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.42,
+  "chars": 1705,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 24.83,
+  "chars": 2204,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.97,
+  "chars": 2953,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.56,
+  "chars": 2157,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 68.89,
+  "chars": 9238,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 73.21,
+  "chars": 10610,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 67.83,
+  "chars": 9546,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 51.77,
+  "chars": 5731,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 72.76,
+  "chars": 9306,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 38.7,
+  "chars": 9721,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 42.01,
+  "chars": 10032,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 44.39,
+  "chars": 10427,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 44.54,
+  "chars": 9399,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 33.42,
+  "chars": 7766,
+  "rc": 0,
+  "stderr": "",
+  "task": "math_opt",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "max=16": true,
+   "max@(4,1,0)": true,
+   "min=0": true,
+   "min@(6,0,0)+(0,3,0)": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.33,
+  "chars": 1414,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.46,
+  "chars": 1535,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.04,
+  "chars": 1520,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.91,
+  "chars": 1389,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.38,
+  "chars": 1378,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.39,
+  "chars": 1528,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.9,
+  "chars": 1408,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 17.63,
+  "chars": 1483,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.95,
+  "chars": 1215,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 11.66,
+  "chars": 1243,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.97,
+  "chars": 1890,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.1,
+  "chars": 1689,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 18.45,
+  "chars": 1766,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.23,
+  "chars": 1708,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.94,
+  "chars": 1766,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 12.3,
+  "chars": 1752,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.04,
+  "chars": 1744,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 12.93,
+  "chars": 1842,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 12.99,
+  "chars": 1823,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 12.55,
+  "chars": 1767,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.87,
+  "chars": 5812,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.75,
+  "chars": 5588,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 31.61,
+  "chars": 5226,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 33.14,
+  "chars": 5327,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 33.19,
+  "chars": 5982,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 22.26,
+  "chars": 5973,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 24.65,
+  "chars": 6488,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 22.28,
+  "chars": 4510,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.16,
+  "chars": 5062,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 23.46,
+  "chars": 6313,
+  "rc": 0,
+  "stderr": "",
+  "task": "monty",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "switch=2/3": true,
+   "stay=1/3": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.01,
+  "chars": 1284,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 22.62,
+  "chars": 1627,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.72,
+  "chars": 1316,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 23.73,
+  "chars": 1271,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.88,
+  "chars": 1760,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 16.3,
+  "chars": 989,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 14.32,
+  "chars": 1084,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.47,
+  "chars": 701,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 13.04,
+  "chars": 1031,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.33,
+  "chars": 1069,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "base",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 26.23,
+  "chars": 2243,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 24.44,
+  "chars": 2248,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.51,
+  "chars": 2652,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 30.97,
+  "chars": 2428,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 36.02,
+  "chars": 2906,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 24.93,
+  "chars": 1823,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.45,
+  "chars": 2022,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 15.68,
+  "chars": 2477,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 21.37,
+  "chars": 2250,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 19.24,
+  "chars": 1891,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v1",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 47.24,
+  "chars": 6596,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 47.82,
+  "chars": 5639,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 41.0,
+  "chars": 6065,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 37.47,
+  "chars": 3873,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 43.03,
+  "chars": 5967,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-high",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.27,
+  "chars": 6848,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 1,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 35.64,
+  "chars": 6904,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 2,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 39.53,
+  "chars": 5794,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 3,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 39.67,
+  "chars": 7959,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 4,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ },
+ {
+  "latency": 34.48,
+  "chars": 7680,
+  "rc": 0,
+  "stderr": "",
+  "task": "subarray",
+  "cond": "v31",
+  "model": "gemini-3.8-flash-low",
+  "rep": 5,
+  "attempts": 1,
+  "checks": {
+   "count=9": true
+  },
+  "score": 1.0,
+  "pass": true,
+  "has_answer_line": true
+ }
+]

@@ -99,3 +99,4 @@ func (c *SafeCache) GetOrCompute(key string, computeFn func() (string, error)) (
 - **비공식 루머 및 명칭 혼동 배제**:
   - 2024년 12월 Google이 공개한 `Gemini 2.0 Flash Thinking Experimental` 및 최신 Flash Thinking 모델들의 공식 스펙 확인.
   - 모델 자체 파라미터 내장 Thinking(내부 사고 토큰)과 클라이언트 측 프롬프트 CoT(`please-think-gemini`)의 역할 및 차이점(투명성, 제어 가능성, API 비용 효율)을 팩트 기반으로 비교 검증해야 함.
+

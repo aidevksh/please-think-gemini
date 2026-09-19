@@ -1,0 +1,21 @@
+{
+  "task_labels": {
+    "math_opt": "비선형 최적화",
+    "monty": "편향 몬티홀",
+    "subarray": "부분배열 패리티",
+    "bulbs": "100전구 토글",
+    "floors": "5층 배치 (거짓 전제)",
+    "go_race": "Go 캐시 경쟁",
+    "h_triples": "약수 삼중쌍 306",
+    "h_josephus": "요세푸스 생존자",
+    "h_seating": "6인 좌석 배치",
+    "h_modexp": "7^2025 mod 1000",
+    "h_gobugs": "Go 다중 버그",
+    "x_gridpaths": "장애물 격자 경로",
+    "x_simgrind": "25단계 시뮬레이션",
+    "x_permcount": "제한 순열 계수",
+    "x_knapsack": "배낭 최적화",
+    "x_premise": "4차방정식 (거짓 전제)"
+  },
+  "tier1": ["math_opt", "monty", "subarray", "bulbs", "floors", "go_race"]
+}
