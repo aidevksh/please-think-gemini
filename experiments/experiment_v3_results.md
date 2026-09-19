@@ -138,3 +138,4 @@
   1. **함정 면역력 (Trap Immunity)**: Task 2에서 문제의 "유일한 해"라는 유도 심문을 거부하고 2개의 동등한 해를 모두 밝혀냄.
   2. **적대적 자가 교정 (Adversarial Verification)**: Task 4에서 비완전제곱수가 혹시 ON이 될 수 있는지 악마의 대변인 관점에서 완전 증명을 수행하여 불확실성을 0으로 제거.
   3. **인지 분리 (Cognitive Separation)**: `[THOUGHT_PROCESS]`에서 철저한 검증을 마친 뒤 `[FINAL_ANSWER]`에서 정제된 결과만 전달하므로 가독성과 신뢰성이 극대화됨.
+

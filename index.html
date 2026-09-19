@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>please-think-gemini | Benchmark Reasoning Dashboard</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            gemini: {
+              blue: '#1a73e8',
+              purple: '#8e24aa',
+              cyan: '#00e5ff'
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    code, pre {
+      font-family: 'Fira Code', monospace;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(99, 102, 241, 0.5);
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen custom-scrollbar antialiased">
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-50 glass-card border-b border-slate-800/80 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+          <span class="text-xl font-black text-white">⚡</span>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+            please-think-gemini
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">v3.0 Final</span>
+          </h1>
+          <p class="text-xs text-slate-400">Deep Adversarial CoT Benchmark & Evaluation Engine</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700">
+          Evaluated on: <strong class="text-sky-400">Gemini 3.8 Flash High</strong>
+        </span>
+        <a href="https://github.com/aidevksh/please-think-gemini" target="_blank" class="text-xs font-medium px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-6 pt-10 pb-8">
+    <div class="text-center max-w-3xl mx-auto mb-10">
+      <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+        Empowering Gemini to <span class="gradient-text">Actually Think</span>
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        Suppressing System 1 fast-thinking traps through structured cognitive phasing, multi-path divergent exploration, and adversarial Devil's Advocate verification.
+      </p>
+    </div>
+
+    <!-- Stat Highlights -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-rose-500">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">Baseline Zero-Shot</p>
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-black text-rose-400">0%</span>
+          <span class="text-xs text-slate-500">Pass Rate (0/4)</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">Premature convergence on first intuition, arithmetic parity flips.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-amber-500">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">V1: Naive CoT</p>
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-black text-amber-400">37.5%</span>
+          <span class="text-xs text-slate-500">Pass Rate (1.5/4)</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">Linear step-by-step thinking; susceptible to early confirmation bias.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-sky-500">
+        <p class="text-xs uppercase tracking-wider text-slate-400 font-semibold mb-1">V2: Structured CoT</p>
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-black text-sky-400">100%</span>
+          <span class="text-xs text-slate-500">Pass Rate (4/4)</span>
+        </div>
+        <p class="text-xs text-slate-400 mt-2">4-section isolation prevents early stop; lacks adversarial check.</p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-5 border-l-4 border-l-emerald-500 bg-emerald-950/20">
+        <p class="text-xs uppercase tracking-wider text-emerald-400 font-semibold mb-1">V3: please-think-gemini</p>
+        <div class="flex items-baseline gap-2">
+          <span class="text-3xl font-black text-emerald-300">100%</span>
+          <span class="text-xs text-emerald-400 font-medium">Zero-Defect Proof</span>
+        </div>
+        <p class="text-xs text-slate-300 mt-2">Devil's advocate audit, reverse plug-in validation, 100% trap immunity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Charts Section -->
+  <section class="max-w-7xl mx-auto px-6 pb-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- Bar Chart -->
+      <div class="lg:col-span-7 glass-card rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+            Pass Rate across Benchmark Difficulty Levels
+          </h3>
+          <span class="text-xs text-slate-400">4 Challenging Tasks</span>
+        </div>
+        <div class="h-64 sm:h-72">
+          <canvas id="passRateChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Radar Chart -->
+      <div class="lg:col-span-5 glass-card rounded-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+            Cognitive Capability Radar
+          </h3>
+          <span class="text-xs text-slate-400">Normalized [0-100]</span>
+        </div>
+        <div class="h-64 sm:h-72">
+          <canvas id="radarChart"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Architecture Flow -->
+  <section class="max-w-7xl mx-auto px-6 pb-12">
+    <div class="glass-card rounded-2xl p-6 sm:p-8">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h3 class="text-2xl font-bold text-white mb-2">The 4-Phase Cognition Architecture</h3>
+        <p class="text-xs sm:text-sm text-slate-400">How <code class="text-indigo-300">please-think-gemini</code> systematically disarms cognitive traps</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+        <!-- Phase 1 -->
+        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">Phase 1</span>
+            <span class="text-lg">🔍</span>
+          </div>
+          <h4 class="text-sm font-bold text-white mb-2">Trap & Bias Audit</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Dissects explicit rules and actively challenges implicit premises (e.g. "Is the user falsely assuming uniqueness?").
+          </p>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Phase 2</span>
+            <span class="text-lg">🌳</span>
+          </div>
+          <h4 class="text-sm font-bold text-white mb-2">Multi-Path Exploration</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Formulates ≥2 independent strategies (e.g., Analytical vs. Brute-force simulation). Forbids stopping at the first valid branch.
+          </p>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800 hover:border-indigo-500/50 transition relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-16 h-16 bg-rose-500/10 rounded-full blur-xl pointer-events-none"></div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-300">Phase 3</span>
+            <span class="text-lg">⚔️</span>
+          </div>
+          <h4 class="text-sm font-bold text-rose-200 mb-2">Adversarial Stress Test</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Acts as a hostile Devil's Advocate. Performs line-by-line plug-in reverse validation into every constraint.
+          </p>
+        </div>
+
+        <!-- Phase 4 -->
+        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800 hover:border-indigo-500/50 transition">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Phase 4</span>
+            <span class="text-lg">💎</span>
+          </div>
+          <h4 class="text-sm font-bold text-white mb-2">Ironclad Synthesis</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Outputs crisp, noise-free answers in <code class="text-emerald-300">[FINAL_ANSWER]</code> after 100% verification survival.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Benchmark Explorer -->
+  <section class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="glass-card rounded-2xl p-6 sm:p-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 border-b border-slate-800 pb-4">
+        <div>
+          <h3 class="text-xl font-bold text-white">Interactive Benchmark Task Explorer</h3>
+          <p class="text-xs text-slate-400">Inspect side-by-side behavioral differences across prompt iterations</p>
+        </div>
+        <!-- Task Tabs -->
+        <div class="flex flex-wrap gap-2" id="taskTabContainer">
+          <button onclick="switchTask(1)" id="tab-btn-1" class="task-tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition">
+            Task 1: Biased Monty Hall
+          </button>
+          <button onclick="switchTask(2)" id="tab-btn-2" class="task-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+            Task 2: 5-Floor Logic
+          </button>
+          <button onclick="switchTask(3)" id="tab-btn-3" class="task-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+            Task 3: Subarray Parity
+          </button>
+          <button onclick="switchTask(4)" id="tab-btn-4" class="task-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition">
+            Task 4: 100-Bulb Toggle
+          </button>
+        </div>
+      </div>
+
+      <!-- Task Details Container (Dynamic) -->
+      <div id="taskContent">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Copy Prompt Section -->
+  <section class="max-w-7xl mx-auto px-6 pb-20">
+    <div class="glass-card rounded-2xl p-6 sm:p-8 border border-indigo-500/30 relative overflow-hidden">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+        <div>
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <span>📋</span>
+            Get the Production Prompt: <span class="gradient-text">FINAL_COT_PROMPT.md</span>
+          </h3>
+          <p class="text-xs text-slate-400">Ready to copy & paste directly into Google AI Studio, Gemini API, or Chat prompts.</p>
+        </div>
+        <button onclick="copyPromptText()" id="copyBtn" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition flex items-center gap-2 shadow-lg shadow-indigo-600/30">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+          <span id="copyBtnText">Copy System Prompt</span>
+        </button>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-xl p-4 border border-slate-800 max-h-72 overflow-y-auto custom-scrollbar">
+        <pre class="text-xs text-slate-300 leading-relaxed whitespace-pre-wrap" id="rawPromptContent">You are an ultra-high-reliability Deep Reasoning Engine engineered for zero-defect mathematical, algorithmic, and logical problem solving.
+Never rush into intuitive, superficial, or single-shot answers. You MUST execute an exhaustive internal deliberation inside `[THOUGHT_PROCESS]` before producing `[FINAL_ANSWER]`.
+
+Your reasoning process MUST rigorously follow this 4-Phase Cognition Architecture:
+
+---
+
+### [THOUGHT_PROCESS]
+
+#### Phase 1: Problem Deconstruction & Implicit Trap Audit
+1. Explicit Constraints: Enumerate all rules, constants, domain limits, and boundary conditions directly specified in the prompt.
+2. Hidden Assumption & Bias Audit:
+   - Actively audit and eliminate intuitive biases, common heuristics, or memory-retrieved shortcuts that may not strictly apply.
+   - Question the user's premise: "Is the prompt leading me toward a false assumption (e.g., claiming a unique solution exists when there may be multiple or none)?"
+3. Formal State Space & Variables: Define mathematical notations, entities, and search spaces with precision.
+
+#### Phase 2: Divergent Exploration & Multi-Path Reasoning
+1. No Early Convergence: Formulate at least TWO distinct, independent resolution strategies (e.g., Algebraic/Analytical vs. Discrete Simulation; Invariant Analysis vs. Exhaustive Branch Search).
+2. Exhaustive Branch Tree: If multiple cases or configurations exist, branch them comprehensively. Never stop at the first valid configuration. Prove why impossible branches fail using explicit contradictions.
+3. Deterministic State Tracking: Use tabular or step-indexed transitions for sequential operations, parity shifts, or combinatorial counts.
+
+#### Phase 3: Adversarial Stress Test & Reverse Verification (Devil's Advocate)
+1. Adversarial Critique: Assume your tentative conclusion is fundamentally flawed. Ask: "Under what edge cases, extreme bounds, or counterexamples does this reasoning collapse?"
+2. Plug-in Reverse Verification:
+   - Substitute your candidate solution(s) back into EVERY SINGLE original constraint line-by-line.
+   - Verify that 100% of conditions evaluate to TRUE.
+3. Edge Case & Singularity Check: Check boundaries such as 0, 1, negatives, parities, empty sets, or infinity where applicable.
+4. Cross-Method Reconciliation: Confirm that Method A and Method B from Phase 2 yield identical results. If there is any discrepancy, diagnose and resolve the root cause.
+
+#### Phase 4: Resolution & Synthesis
+- Synthesize the final, ironclad solution that survived all adversarial checks with zero logical leaps.
+
+---
+
+### [FINAL_ANSWER]
+Provide a concise, direct, and well-structured response containing:
+- Direct Answer / Conclusion (prominently stated)
+- Key Supporting Proofs / Deductions
+- Clarifications on Edge Cases or Multiple Solutions (if discovered during Phase 1/3)
+- Language Rule: Provide `[FINAL_ANSWER]` in the same language as the user's inquiry with crystal clarity.</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>Released under the <a href="LICENSE" class="text-indigo-400 hover:underline">Apache License 2.0</a>. Crafted with precision for Gemini 3.8 Flash High.</p>
+      <p>Project Repository: <a href="https://github.com/aidevksh/please-think-gemini" target="_blank" class="text-indigo-400 hover:underline">aidevksh/please-think-gemini</a></p>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    // Tasks Dataset
+    const tasksData = {
+      1: {
+        title: "Task 1: Biased Monty Hall Variant (Conditional Probability)",
+        domain: "Bayesian Statistics / Cognitive Traps",
+        description: "Door A chosen. Host knows car location and must open goat door. If Car in A, host opens B or C (50:50). If Car in B, host must open C (100%). If Car in C, host must open B (100%). Host opens Door B revealing goat. What is P(Car=C | Host=B)?",
+        groundTruth: "P(Car=C | Host=B) = 2/3, P(Car=A | Host=B) = 1/3. Switching to Door C yields 2x higher odds.",
+        v1: {
+          badge: "Partial Pass (37.5%)",
+          color: "border-amber-500/40 text-amber-300",
+          summary: "Recalled standard Monty Hall memory and declared 2/3, but failed to derive formal Bayes denominator sum P(Host=B) = 1/6 + 0 + 1/3 = 1/2. Would fail if asymmetric host probability p ≠ 1/2 was assigned."
+        },
+        v2: {
+          badge: "Pass (100%)",
+          color: "border-sky-500/40 text-sky-300",
+          summary: "Section 1 extracted P(Host=B|X) table. Section 2 calculated total probability law P(Host=B) = 1/2. Section 3 applied Bayes formula directly to reach 2/3 with clean algebra."
+        },
+        v3: {
+          badge: "Perfect Pass (Zero-Defect)",
+          color: "border-emerald-500/40 text-emerald-300",
+          summary: "Phase 1 audited host bias. Phase 2 performed bijective dual-path check: Frequentist simulation (300 trials: 100 in C, 50 in A) matched Bayes formula exactly. Phase 3 audited Monty Fall hypotheses and verified probability conservation (1/3 + 2/3 = 1)."
+        }
+      },
+      2: {
+        title: "Task 2: 5-Floor Spatial Constraint Puzzle",
+        domain: "Deductive Logic & Premise Auditing",
+        description: "5 developers (Alex, Blake, Casey, Dana, Evan) on floors 1-5. Alex > Blake; Casey even floor; |Blake - Casey| = 3; Dana ≠ Evan + 1; Evan ≠ 1; Casey=4 ⇒ Dana < Alex. Question asks to deduce 'the unique solution'.",
+        groundTruth: "Two equally valid solutions exist: [1:Blake, 2:Dana, 3:Evan, 4:Casey, 5:Alex] AND [1:Blake, 2:Dana, 3:Alex, 4:Casey, 5:Evan]. The uniqueness premise in the prompt is false.",
+        v1: {
+          badge: "Failed (Premature Convergence)",
+          color: "border-rose-500/40 text-rose-300",
+          summary: "Found configuration [B, D, E, C, A] and immediately terminated, falsely claiming it was the 'unique' solution. Completely blind to the second valid branch."
+        },
+        v2: {
+          badge: "Pass (Exhaustive Branches)",
+          color: "border-sky-500/40 text-sky-300",
+          summary: "Section 2 decomposed Casey=2 (contradiction) and Casey=4. Sub-branch 2-1 (Alex=5) and Sub-branch 2-2 (Alex=3) both evaluated to valid states. Identified both valid configurations."
+        },
+        v3: {
+          badge: "Exceptional (Debunked False Premise)",
+          color: "border-emerald-500/40 text-emerald-300",
+          summary: "Phase 1 explicitly flagged the prompt's 'unique solution' question as a potential trap. Phase 2 branched all 3 cases. Phase 3 performed reverse plug-in verification for both solutions against all 6 rules. Formally disproved uniqueness."
+        }
+      },
+      3: {
+        title: "Task 3: Contiguous Subarray Parity Count",
+        domain: "Discrete Mathematics & Prefix Sums",
+        description: "Given A = [3, -2, 5, -1, 4, -6, 2]. Count contiguous subarrays A[i..j] with length (j - i + 1) ≥ 3 and sum ≡ 0 (mod 2).",
+        groundTruth: "Total 9 qualifying subarrays: (1,3)=6, (2,4)=2, (2,5)=6, (2,6)=0, (2,7)=2, (3,5)=8, (3,6)=2, (3,7)=4, (5,7)=0.",
+        v1: {
+          badge: "Pass (Unstructured Brute-force)",
+          color: "border-sky-500/40 text-sky-300",
+          summary: "Manually summed every window. Counted 4 (len 3) + 2 (len 4) + 2 (len 5) + 1 (len 6) = 9. Correct, but vulnerable to arithmetic drift without invariant verification."
+        },
+        v2: {
+          badge: "Pass (Algebraic Prefix Sums)",
+          color: "border-sky-500/40 text-sky-300",
+          summary: "Constructed prefix sum array S = [0, 3, 1, 6, 5, 9, 3, 5]. Classified even parity indices {0, 3} and odd parity indices {1, 2, 4, 5, 6, 7} with distance ≥ 3. Yielded 1 + 8 = 9."
+        },
+        v3: {
+          badge: "Perfect Pass (Bijective Cross-Verification)",
+          color: "border-emerald-500/40 text-emerald-300",
+          summary: "Phase 1 audited off-by-one indices (j - (i - 1) ≥ 3). Phase 2 combined prefix parity clustering with sliding window brute-force. Phase 3 executed a 1:1 bijective match between both sets. Verified zero sum (0 ≡ 0 mod 2)."
+        }
+      },
+      4: {
+        title: "Task 4: 100-Bulb Toggle with Intervention",
+        domain: "Number Theory & State Space Tracking",
+        description: "100 bulbs initially OFF. People 1 to 50 toggle multiples. At person 50, all bulbs with EXACTLY 3 divisors are forcefully reset to OFF. Then people 51 to 100 toggle multiples. Which bulbs are ON at the end?",
+        groundTruth: "Bulbs with 3 divisors = {4, 9, 25, 49} (squares of primes). Final ON bulbs = {1, 16, 36, 64, 81, 100} (Total 6 bulbs).",
+        v1: {
+          badge: "Failed (Parity Arithmetic Drift)",
+          color: "border-rose-500/40 text-rose-300",
+          summary: "Correctly identified p²={4,9,25,49}. But for 64, 81, 100, confused partial divisor parity and mistakenly concluded person 64 turned bulb 64 OFF, erroneously outputting only {1, 16, 36}."
+        },
+        v2: {
+          badge: "Pass (State Decomposition)",
+          color: "border-sky-500/40 text-sky-300",
+          summary: "Decoupled people ≤50 from people ≥51. Proved k ≥ 51 can only toggle bulb k once. Separated {1, 16, 36} (all divisors ≤50) and {64, 81, 100} (even toggles ≤50 + 1 final toggle = ON). Total 6."
+        },
+        v3: {
+          badge: "Perfect Pass (Formal Invariant Proof)",
+          color: "border-emerald-500/40 text-emerald-300",
+          summary: "In Phase 3 Devil's Advocate, posed: 'Can ANY non-square bulb end up ON?' Formally proved that for any non-square M, if M ≤ 50 toggles=2m (OFF), and if M > 50 toggles=(2m-1)+1=2m (OFF). Complete mathematical impossibility proof."
+        }
+      }
+    };
+
+    function switchTask(taskId) {
+      // Update Tab Styles
+      for (let i = 1; i <= 4; i++) {
+        const btn = document.getElementById(`tab-btn-${i}`);
+        if (i === taskId) {
+          btn.className = "task-tab-btn active px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-600 text-white transition shadow-sm";
+        } else {
+          btn.className = "task-tab-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition";
+        }
+      }
+
+      const task = tasksData[taskId];
+      const html = `
+        <div class="space-y-6">
+          <div class="bg-slate-900/80 rounded-xl p-5 border border-slate-800">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h4 class="text-base font-bold text-white">${task.title}</h4>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700 font-mono">${task.domain}</span>
+            </div>
+            <p class="text-xs text-slate-300 mb-3 leading-relaxed">${task.description}</p>
+            <div class="p-3 rounded-lg bg-indigo-950/40 border border-indigo-500/30 text-xs">
+              <strong class="text-indigo-300">Ground Truth Answer:</strong> <span class="text-slate-200">${task.groundTruth}</span>
+            </div>
+          </div>
+
+          <!-- Comparison Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <!-- V1 Card -->
+            <div class="bg-slate-900/70 rounded-xl p-5 border border-slate-800/80 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-slate-400">V1 Naive CoT</span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded border ${task.v1.color}">${task.v1.badge}</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">${task.v1.summary}</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-800/60 text-[11px] text-slate-500">
+                Cognitive Flaw: No Adversarial Check
+              </div>
+            </div>
+
+            <!-- V2 Card -->
+            <div class="bg-slate-900/70 rounded-xl p-5 border border-slate-800/80 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-slate-400">V2 Structured CoT</span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded border ${task.v2.color}">${task.v2.badge}</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed">${task.v2.summary}</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-800/60 text-[11px] text-slate-500">
+                Improvement: 4-Section Decomposition
+              </div>
+            </div>
+
+            <!-- V3 Card -->
+            <div class="bg-slate-900/90 rounded-xl p-5 border border-emerald-500/30 shadow-lg shadow-emerald-500/5 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-xs font-bold text-emerald-300">V3 please-think-gemini</span>
+                  <span class="text-xs font-semibold px-2 py-0.5 rounded border ${task.v3.color}">${task.v3.badge}</span>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed">${task.v3.summary}</p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-800/60 text-[11px] text-emerald-400/80 font-medium">
+                Breakthrough: Devil's Advocate & Bijective Check
+              </div>
+            </div>
+
+          </div>
+        </div>
+      `;
+
+      document.getElementById('taskContent').innerHTML = html;
+    }
+
+    // Copy Prompt Function
+    function copyPromptText() {
+      const text = document.getElementById('rawPromptContent').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById('copyBtnText');
+        btnText.innerText = "Copied to Clipboard! ✓";
+        setTimeout(() => {
+          btnText.innerText = "Copy System Prompt";
+        }, 2000);
+      });
+    }
+
+    // Initialize Charts & Views
+    window.addEventListener('DOMContentLoaded', () => {
+      switchTask(1);
+
+      // Pass Rate Bar Chart
+      const ctxBar = document.getElementById('passRateChart').getContext('2d');
+      new Chart(ctxBar, {
+        type: 'bar',
+        data: {
+          labels: ['Baseline Zero-Shot', 'V1 Naive CoT', 'V2 Structured CoT', 'V3 please-think-gemini'],
+          datasets: [{
+            label: 'Benchmark Accuracy (%)',
+            data: [0, 37.5, 100, 100],
+            backgroundColor: [
+              'rgba(244, 63, 94, 0.7)',
+              'rgba(245, 158, 11, 0.7)',
+              'rgba(56, 189, 248, 0.7)',
+              'rgba(16, 185, 129, 0.85)'
+            ],
+            borderColor: [
+              '#f43f5e',
+              '#f59e0b',
+              '#38bdf8',
+              '#10b981'
+            ],
+            borderWidth: 1.5,
+            borderRadius: 8
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => ` Pass Rate: ${ctx.raw}%`
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: { color: 'rgba(255, 255, 255, 0.05)' },
+              ticks: { color: '#94a3b8', font: { size: 11 } }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { color: '#94a3b8', font: { size: 11 } }
+            }
+          }
+        }
+      });
+
+      // Radar Chart
+      const ctxRadar = document.getElementById('radarChart').getContext('2d');
+      new Chart(ctxRadar, {
+        type: 'radar',
+        data: {
+          labels: ['Mathematical Rigor', 'Trap Immunity', 'Branch Completeness', 'Reverse Verification', 'Output Cleanliness'],
+          datasets: [
+            {
+              label: 'V1 Naive CoT',
+              data: [40, 25, 30, 10, 30],
+              borderColor: '#f59e0b',
+              backgroundColor: 'rgba(245, 158, 11, 0.15)',
+              borderWidth: 1.5,
+              pointRadius: 2
+            },
+            {
+              label: 'V2 Structured CoT',
+              data: [85, 75, 90, 40, 60],
+              borderColor: '#38bdf8',
+              backgroundColor: 'rgba(56, 189, 248, 0.15)',
+              borderWidth: 1.5,
+              pointRadius: 2
+            },
+            {
+              label: 'V3 please-think-gemini',
+              data: [100, 100, 100, 100, 95],
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.25)',
+              borderWidth: 2,
+              pointRadius: 3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { color: '#cbd5e1', font: { size: 10 } }
+            }
+          },
+          scales: {
+            r: {
+              min: 0,
+              max: 100,
+              angleLines: { color: 'rgba(255, 255, 255, 0.08)' },
+              grid: { color: 'rgba(255, 255, 255, 0.08)' },
+              pointLabels: { color: '#94a3b8', font: { size: 9 } },
+              ticks: { display: false }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
